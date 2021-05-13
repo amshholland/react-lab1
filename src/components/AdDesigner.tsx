@@ -4,9 +4,21 @@ import { useState } from 'react';
 
 function AdDesigner() {
 
-    function iceCreamChoice() {
+    const [ flavor, setFlavor ] = useState( '' );
+    function iceCreamChoice( flavor: string ) {
+        setFlavor( 'Chocolate' );
+        setFlavor( 'Vanilla' );
+        setFlavor( 'Strawberry' );
+    }
+
+    function fontSize() {
 
     }
+
+    function colorTheme() {
+
+    }
+
     return (
         <div className="AdDesigner">
             <h2>Ad Designer</h2>
@@ -15,11 +27,11 @@ function AdDesigner() {
                 <h2>Strawberry</h2>
             </div>
             <p>What to Support</p>
-            <p>
-                <button value="Chocolate">Chocolate</button>
-                <button value="Vanilla">Vanilla</button>
-                <button value="Strawberry">Strawberry</button>
-            </p>
+            <div className="btn-group" role="group" aria-label="Basic example">
+                <button value="Chocolate" className="btn btn-primary">Chocolate</button>
+                <button value="Vanilla" className="btn btn-primary">Vanilla</button>
+                <button value="Strawberry" className="btn btn-primary">Strawberry</button>
+            </div>
             <p>Color Theme</p>
             <p>
                 <button value="Light">Light</button>

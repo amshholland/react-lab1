@@ -3,6 +3,9 @@ import './Votes.css';
 import { useState } from 'react';
 
 function Votes() {
+    const [ flavor, flavorPicked ] = useState( '' );
+
+
     return (
         <div className="Votes">
             <h1>Vote Here</h1>
